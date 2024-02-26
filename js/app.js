@@ -1,6 +1,5 @@
 import View from "./view.js";
 import Store from "./store.js";
-import { makeRandomMove } from "./ai.js";
 
 const playerUser = [
   {
