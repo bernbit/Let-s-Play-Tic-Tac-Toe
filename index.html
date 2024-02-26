@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Let's Play</h2>
+      <h1>TIC <span>TAC </span>TOE</h1>
+    </header>
+    <main class="grid">
+      <div class="above">
+        <div class="left-above" data-id="player-turn">
+          <i class="fa-solid fa-x player1-color" data-id="player-icon"></i>
+          <p class="player1-color" data-id="player-text">Player 1, your turn</p>
+        </div>
+        <div class="right-above">
+          <button class="action" data-id="menu">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="options hidden" data-id="menu-content">
+            <button data-id="new-round">New Round</button>
+            <button data-id="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="board" data-id="box">
+        <div id="1" class="boxes box-1" data-id="boxes"></div>
+        <div id="2" class="boxes box-2" data-id="boxes"></div>
+        <div id="3" class="boxes box-3" data-id="boxes"></div>
+        <div id="4" class="boxes box-4" data-id="boxes"></div>
+        <div id="5" class="boxes box-5" data-id="boxes"></div>
+        <div id="6" class="boxes box-6" data-id="boxes"></div>
+        <div id="7" class="boxes box-7" data-id="boxes"></div>
+        <div id="8" class="boxes box-8" data-id="boxes"></div>
+        <div id="9" class="boxes box-9" data-id="boxes"></div>
+      </div>
+
+      <div class="below">
+        <div class="player1-score score">
+          <p class="below-title">Player 1</p>
+          <p class="count" data-id="p1-wins">0 <span>Wins</span></p>
+        </div>
+        <div class="draw score">
+          <p class="below-title">Draw</p>
+          <p class="count" data-id="ties">0</p>
+        </div>
+        <div class="player2-score score">
+          <p class="below-title">Player 2</p>
+          <p class="count" data-id="p2-wins">0 <span>Wins</span></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button data-id="manual">How to Play</button>
+      <img src="/img/shortcut-key-btn.png" alt="" data-id="shortcut-btn" />
+    </footer>
+
+    <div class="shortcut hidden" data-id="shortcut-content">
+      <div class="shortcut-header">
+        <p class="head-title">KEYBOARD SHORTCUTS</p>
+        <i class="fa-solid fa-circle-xmark" data-id="shortcut-close"></i>
+      </div>
+      <div class="shortcut-body">
+        <div class="keys">
+          <img src="/img/shortcut-key-A.png" alt="" />
+          <p>Press A to open Action Menu</p>
+        </div>
+        <div class="keys">
+          <img src="/img/shortcut-key-N.png" alt="" />
+          <p>Press N for New Round</p>
+        </div>
+        <div class="keys">
+          <img src="/img/shortcut-key-R.png" alt="" />
+          <p>Press R to Reset the board</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="instruction hidden" data-id="manual-content">
+      <div class="instruction-header">
+        <p class="head-title">HOW TO PLAY THE GAME?</p>
+        <i class="fa-solid fa-circle-xmark" data-id="manual-close"></i>
+      </div>
+      <div class="instruction-body">
+        <p class="step-title">Taking Turns</p>
+        <ul class="step-info">
+          <li>Player "X" goes first, followed by player "O."</li>
+          <li>
+            Each player takes turns placing their mark in an empty square on the
+            grid.
+          </li>
+        </ul>
+
+        <p class="step-title">Winning the Game</p>
+        <ul class="step-info">
+          <li>
+            The game ends when one player gets three of their marks in a row.
+          </li>
+          <li>A row can be horizontal, vertical, or diagonal.</li>
+          <li>
+            If all squares are filled, and no player has won, the game is a tie
+          </li>
+        </ul>
+
+        <div class="example">
+          <div class="sample">
+            <p>Vertical Row</p>
+            <img src="./img/vertical.png" alt="" />
+          </div>
+          <div class="sample">
+            <p>Horizontal Row</p>
+            <img src="./img/horizontal.png" alt="" />
+          </div>
+          <div class="sample">
+            <p>Diagonal Row</p>
+            <img src="./img/diagonal.png" alt="" />
+          </div>
+        </div>
+        <p class="step-title">Playing Again</p>
+        <ul class="step-info">
+          <li>
+            To start another round, go to the action bar and click "New Round"
+            to clear the grid and play again.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert-box hidden" data-id="alert-box">
+      <div class="alert-content">
+        <p data-id="alert-text">Player 1 Win</p>
+        <button data-id="alert-btn">Play Again</button>
+      </div>
+    </div>
+    <div class="reset-confirmation-box hidden" data-id="reset-confirmation-box">
+      <div class="reset-confirmation-content">
+        <p>Are you sure you want to reset the board?</p>
+        <div class="reset-confirmation-buttons">
+          <button class="yes-btn" data-id="yes-btn">Yes</button>
+          <button class="no-btn" data-id="no-btn">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sound-effects">
+      <audio
+        src="/audio/Player-1-Audio.wav"
+        preload="auto"
+        type="audio/wav"
+        data-id="p1-audio"
+      ></audio>
+
+      <audio
+        src="/audio/Player-2-Audio.wav"
+        preload="auto"
+        type="audio/wav"
+        data-id="p2-audio"
+      ></audio>
+
+      <audio
+        src="/audio/Winner-Audio.mp3"
+        preload="auto"
+        type="audio/mp3"
+        data-id="alert-audio"
+      ></audio>
+    </div>
+
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
