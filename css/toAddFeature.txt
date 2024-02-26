@@ -1,6 +1,0 @@
-Add a Sound EveryClick
-
-Add a AccessKey or Shortcut
-Add A Splash Screen or Pre Loader
-
-Add a escape after alterbox or annoucment of winner appear
