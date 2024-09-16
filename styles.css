@@ -270,12 +270,22 @@ footer img:hover {
 }
 
 /* Instruction*/
+
+.instruction-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .instruction {
   background-color: var(--accent);
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   position: absolute;
-  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
   width: 90%;
   height: 82%;
   display: grid;
@@ -345,12 +355,23 @@ footer img:hover {
 }
 
 /*Shortcut Keys*/
+
+.shortcut-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .shortcut {
   background-color: var(--accent);
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   position: absolute;
-  top: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 90%;
   height: 50%;
   display: grid;
@@ -389,6 +410,7 @@ footer img:hover {
   padding: 25px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .shortcut-body .keys {
   display: flex;
@@ -425,7 +447,7 @@ footer img:hover {
 .alert-box .alert-content button {
   background-color: var(--footer-color);
   border: none;
-  color: #fff;
+  color: var(--bg-color);
   font-size: 1.02rem;
   border-radius: 8px;
   padding: 10px;
@@ -443,8 +465,7 @@ footer img:hover {
 .reset-confirmation-box .reset-confirmation-content {
   background-color: rgba(5, 59, 80, 0.9);
   border-radius: 8px;
-  width: 60%;
-  height: 16%;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -455,6 +476,7 @@ footer img:hover {
   top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80vw;
 }
 .reset-confirmation-box
   .reset-confirmation-content
@@ -465,18 +487,18 @@ footer img:hover {
   width: 100%;
 }
 .reset-confirmation-box .reset-confirmation-content .yes-btn {
-  background-color: var(--footer-color);
+  background-color: var(--color-set2);
   border: none;
-  color: #fff;
+  color: var(--bg-color);
   font-size: 1.02rem;
   border-radius: 5px;
   padding: 10px;
   flex-basis: 30%;
 }
 .reset-confirmation-box .reset-confirmation-content .no-btn {
-  background-color: var(--action-color);
+  background-color: var(--footer-color);
   border: none;
-  color: #fff;
+  color: var(--bg-color);
   font-size: 1.02rem;
   border-radius: 5px;
   padding: 10px;

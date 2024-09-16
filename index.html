@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -78,79 +78,85 @@
     </main>
     <footer>
       <button data-id="manual">How to Play</button>
-      <img src="/img/shortcut-key-btn.png" alt="" data-id="shortcut-btn" />
+      <img src="img/shortcut-key-btn.png" alt="" data-id="shortcut-btn" />
     </footer>
 
-    <div class="shortcut hidden" data-id="shortcut-content">
-      <div class="shortcut-header">
-        <p class="head-title">KEYBOARD SHORTCUTS</p>
-        <i class="fa-solid fa-circle-xmark" data-id="shortcut-close"></i>
-      </div>
-      <div class="shortcut-body">
-        <div class="keys">
-          <img src="/img/shortcut-key-A.png" alt="" />
-          <p>Press A to open Action Menu</p>
+    <div class="shortcut-bg hidden" data-id="shortcut-content">
+      <div class="shortcut">
+        <div class="shortcut-header">
+          <p class="head-title">KEYBOARD SHORTCUTS</p>
+          <i class="fa-solid fa-circle-xmark" data-id="shortcut-close"></i>
         </div>
-        <div class="keys">
-          <img src="/img/shortcut-key-N.png" alt="" />
-          <p>Press N for New Round</p>
-        </div>
-        <div class="keys">
-          <img src="/img/shortcut-key-R.png" alt="" />
-          <p>Press R to Reset the board</p>
+        <div class="shortcut-body">
+          <div class="keys">
+            <img src="img/shortcut-key-A.png" alt="" />
+            <p>Press A to open Action Menu</p>
+          </div>
+          <div class="keys">
+            <img src="img/shortcut-key-N.png" alt="" />
+            <p>Press N for New Round</p>
+          </div>
+          <div class="keys">
+            <img src="img/shortcut-key-R.png" alt="" />
+            <p>Press R to Reset the board</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="instruction hidden" data-id="manual-content">
-      <div class="instruction-header">
-        <p class="head-title">HOW TO PLAY THE GAME?</p>
-        <i class="fa-solid fa-circle-xmark" data-id="manual-close"></i>
-      </div>
-      <div class="instruction-body">
-        <p class="step-title">Taking Turns</p>
-        <ul class="step-info">
-          <li>Player "X" goes first, followed by player "O."</li>
-          <li>
-            Each player takes turns placing their mark in an empty square on the
-            grid.
-          </li>
-        </ul>
-
-        <p class="step-title">Winning the Game</p>
-        <ul class="step-info">
-          <li>
-            The game ends when one player gets three of their marks in a row.
-          </li>
-          <li>A row can be horizontal, vertical, or diagonal.</li>
-          <li>
-            If all squares are filled, and no player has won, the game is a tie
-          </li>
-        </ul>
-
-        <div class="example">
-          <div class="sample">
-            <p>Vertical Row</p>
-            <img src="./img/vertical.png" alt="" />
-          </div>
-          <div class="sample">
-            <p>Horizontal Row</p>
-            <img src="./img/horizontal.png" alt="" />
-          </div>
-          <div class="sample">
-            <p>Diagonal Row</p>
-            <img src="./img/diagonal.png" alt="" />
-          </div>
+    <div class="instruction-bg hidden" data-id="manual-content">
+      <div class="instruction">
+        <div class="instruction-header">
+          <p class="head-title">HOW TO PLAY THE GAME?</p>
+          <i class="fa-solid fa-circle-xmark" data-id="manual-close"></i>
         </div>
-        <p class="step-title">Playing Again</p>
-        <ul class="step-info">
-          <li>
-            To start another round, go to the action bar and click "New Round"
-            to clear the grid and play again.
-          </li>
-        </ul>
+        <div class="instruction-body">
+          <p class="step-title">Taking Turns</p>
+          <ul class="step-info">
+            <li>Player "X" goes first, followed by player "O."</li>
+            <li>
+              Each player takes turns placing their mark in an empty square on
+              the grid.
+            </li>
+          </ul>
+
+          <p class="step-title">Winning the Game</p>
+          <ul class="step-info">
+            <li>
+              The game ends when one player gets three of their marks in a row.
+            </li>
+            <li>A row can be horizontal, vertical, or diagonal.</li>
+            <li>
+              If all squares are filled, and no player has won, the game is a
+              tie
+            </li>
+          </ul>
+
+          <div class="example">
+            <div class="sample">
+              <p>Vertical Row</p>
+              <img src="./img/vertical.png" alt="" />
+            </div>
+            <div class="sample">
+              <p>Horizontal Row</p>
+              <img src="./img/horizontal.png" alt="" />
+            </div>
+            <div class="sample">
+              <p>Diagonal Row</p>
+              <img src="./img/diagonal.png" alt="" />
+            </div>
+          </div>
+          <p class="step-title">Playing Again</p>
+          <ul class="step-info">
+            <li>
+              To start another round, go to the action bar and click "New Round"
+              to clear the grid and play again.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+
     <div class="alert-box hidden" data-id="alert-box">
       <div class="alert-content">
         <p data-id="alert-text">Player 1 Win</p>
