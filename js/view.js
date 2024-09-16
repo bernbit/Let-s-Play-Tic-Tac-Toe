@@ -173,9 +173,9 @@ export default class View {
   /*DOM Helper Methods */
 
   #updateScoreBoard(p1wins, p2wins, ties) {
-    this.$.p1wins.innerText = `${p1wins} Wins`;
+    this.$.p1wins.innerText = `${p1wins}`;
     this.$.ties.innerText = `${ties}`;
-    this.$.p2wins.innerText = `${p2wins} Wins`;
+    this.$.p2wins.innerText = `${p2wins}`;
   }
   #openAlertBox(message) {
     this.$.alertBox.classList.remove("hidden");

@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@400;700&display=swap");
+
 :root {
-  --bg-color: #053b50;
+  --bg-color: #222831;
   --color-set1: #f6fa70;
-  --color-set2: #64ccc5;
-  --action-color: #808080;
-  --footer-color: #d83f31;
+  --color-set2: #92dce5;
+  --footer-color: #ffffff;
+  --accent: #4e535a;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -132,7 +134,7 @@ header h2 {
   background: var(--footer-color);
   border: none;
   border-radius: 5px;
-  color: white;
+  /* color: white; */
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
@@ -149,7 +151,7 @@ header h2 {
   background: var(--footer-color);
   border: none;
   border-radius: 5px;
-  color: white;
+  /* color: var(--color-set2); */
   text-align: justify;
   font-size: 0.8rem;
 }
@@ -203,10 +205,10 @@ header h2 {
   border-radius: 10px;
 }
 .below .player1-score .below-title {
-  color: var(--color-set1);
+  /* color: var(--color-set1); */
 }
 .below .draw {
-  background-color: #fff;
+  background-color: var(--footer-color);
   border-radius: 10px;
 }
 
@@ -215,7 +217,7 @@ header h2 {
   border-radius: 10px;
 }
 .below .player2-score .below-title {
-  color: var(--color-set2);
+  /* color: var(--color-set2); */
 }
 
 .below .score {
@@ -223,18 +225,16 @@ header h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6px;
 }
 .below .score .below-title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.1rem;
-  position: relative;
-  top: 4px;
-  letter-spacing: 0.8px;
+  font-weight: 500;
+  padding: 2px;
 }
 .below .score .count {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.7rem;
 }
 
 footer {
@@ -271,7 +271,7 @@ footer img:hover {
 
 /* Instruction*/
 .instruction {
-  background-color: var(--footer-color);
+  background-color: var(--accent);
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   position: absolute;
@@ -346,7 +346,7 @@ footer img:hover {
 
 /*Shortcut Keys*/
 .shortcut {
-  background-color: var(--footer-color);
+  background-color: var(--accent);
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   position: absolute;
@@ -600,11 +600,8 @@ footer img:hover {
     grid-template-rows: 0.9fr;
   }
   .below .score .below-title {
-    font-size: 1.4rem;
-    top: 4.5px;
-  }
-  .below .score .count {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem;
+    top: 4.5px; */
   }
 
   footer {
